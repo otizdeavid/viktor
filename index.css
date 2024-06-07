@@ -1,0 +1,454 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Ubuntu';
+
+}
+
+nav {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(91,105,110, 0.5 );
+    position: sticky;
+    height: 80px;
+    top: 0;
+    z-index: 9999;
+    /*background: #009fbd;*/
+}
+
+nav .header {
+    font-family: "Sacramento";
+    font-weight: bold;
+    font-size: 2rem;
+    color: #009fbd;
+}
+
+span{
+    text-decoration: underline;
+}
+
+.love {
+    color: #ff1023;
+    text-decoration: none;
+    font-size:1.2rem;
+}
+
+
+nav li {
+    list-style: none;
+    justify-content: space-between;
+    padding: 0 1rem;
+    font-size: 1rem;
+    width: 100%;
+    font-weight: 200;
+    color: #f5f5f5;
+    cursor: pointer;
+
+}
+
+a{
+    text-decoration: none; 
+    color: #f5f5f5;
+    font-family: 'Roboto';
+}
+
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+}
+
+@media screen and (max-width:820px) {
+    nav {
+        width: 100%;
+        max-width:1300px;
+        padding: 0 1rem;
+    }
+
+    nav ul {
+        padding: 1rem;
+        width: 100%;
+        display: flex;
+    }
+}
+
+@media screen and (max-width:500px) {
+    nav ul {
+        width: 100%;
+    }
+}
+
+/* HERO SECTION*/
+
+header{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    background-color: #91c8e4; 
+}
+
+.cloud__y{
+    width: 100px;
+    position: absolute;
+    right: 100px;
+}
+
+.img__sunny {
+    height: 80px;
+    position: absolute;
+    top:2rem;
+    right:1rem;
+    animation: bounce 3s ease-in-out infinite;        
+}
+.cloud__x{
+    width: 100px;
+    position:absolute;
+    top:0;
+    left: 0;
+}
+
+.img__tree{
+    height: 300px
+    
+}
+
+
+p{
+    /* line-height: 2; */
+    color: #808080;
+}
+
+h1{
+    font-family:'sacramento';
+    font-weight: bold;
+    font-size: 5rem;
+    margin: 0;
+    padding: 50px 0 3px 0;
+    color:#009fbd;
+}
+
+@media screen and (max-width:600px) {
+    .main__content h1 {
+        font-size: 4rem;
+    }
+
+    .main__content p {
+        font-size: 2rem;
+    }
+}
+@keyframes bounce {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.5);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+
+  
+
+/* ----MiDDLE SECTION FOR CSS---*/
+
+#middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3em 2rem;
+    background: #f5f5f5;
+}
+
+.middle-container h2 {
+    color: #91c8e4;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.middle-container p{
+    margin-top: 2em;
+}
+
+@media screen and (max-width:768px) {
+    #middle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: 80vh;
+
+    }
+}
+/* My Skills CSS Section */
+
+#Skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 50px;
+
+}
+
+#Skills h2 {
+    color:#91c8e4;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+}
+
+.skills__container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns:1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.skills__content {
+    background: #91c8e4;
+    padding: 30px 10px;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s; 
+    cursor: pointer;
+}
+
+.skills__content p {
+    color: #1c1c1c;
+    font-weight: 400;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.skills__content a {
+    color: #1c1c1c;
+    font-weight: bold;
+    margin-bottom:20px;
+}
+
+.skills__content h3 {
+    color: rgb(240, 240, 4);
+}
+
+.skills__content:hover {
+    background: #f5f5f5;
+    transform: translateY(-10px);
+}
+
+@media screen and (max-width:900px) {
+    #Skills {
+        display:flex;
+        flex-direction:column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    #Skills h2 {
+        font-size: 1.7rem;
+    }
+
+    .skills__container {
+        display: grid;
+        grid-template-columns: auto;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    
+    hr{
+        border: dotted #eaf6f6 3px;
+        border-bottom: none;
+        width: 2%;
+        margin: 100px auto;
+     }
+}
+
+hr{
+   border: dotted #eaf6f6 6px;
+   border-bottom: none;
+   width: 4%;
+   margin: 100px auto;
+}
+
+.in__zero{
+    font-family: 'Roboto';
+    font-size: 2.5rem;
+    color:#009fbd;
+}
+
+.my__img{
+    width: 120px;
+    height: 120px;
+    border-radius: 60px;
+}
+
+/* MY Portfolio Section CSS */
+
+#portfolio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 50px;
+    background-color: #009fbd;
+    gap: 40px;
+    width: 100%;
+}
+
+#portfolio h2 {
+    padding: 20px 0 0 0;
+    color:#91c8e4;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+}
+
+.mywork__container {
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-gap: 40px;
+}
+
+.mywork__content {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.mywork__content img {
+    /* height: 230px; */
+    width:100%; 
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+
+.mywork__content:hover img {
+    transform: scale(1.1);
+}
+
+.work {
+    height:0;
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.7),#ffff20);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 10px;
+    color:#f5f5f5;
+    transition: height 0.5s;
+}
+
+.work h4 {
+    margin-bottom: 0.8em;
+    font-weight: 600;
+}
+
+.work p {
+    color: #f5f5f5;
+    font-weight: 500;
+    line-height: 1.5em;
+    margin-bottom: 0.7em;
+}
+
+.work a {
+    text-decoration: none;
+    cursor: pointer;
+    background: #f5f5f5;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    color: #009fbd;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1rem;
+    line-height: 40px;
+
+    
+}
+
+.mywork__content:hover .work {
+    height: 100%;
+}
+.btn {
+    text-decoration: none;
+    border: none;
+    outline: none;
+    padding:10px 15px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    background: #f5f5f5;
+    color: #009fbd;
+
+}
+
+.btn a {
+    color: #009fbd;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+@media screen and (max-width:780px) {
+    #portfolio {
+    
+    }
+    .mywork__container {
+        display: grid;
+        grid-template-columns: auto;
+    }
+
+}
+
+/* The contact section */
+
+#contact {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0 0 0;
+    
+}
+
+.bottom-container {
+    background:#009fbd;
+    padding: 20px;
+    
+}
+
+.bottom-container i {
+    font-size: 2em;
+    margin:0 30px;
+}
+
+
+
+
+
+
